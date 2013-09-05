@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Index{% endblock %}
+{% block content %}
+
+{% include 'nav.html' %}
+{% if user.is_authenticated %}
+	<p>Welcome, {{ user.username }}. Thanks for logging in. You can <a href="{% url 'auth_logout' %}">log out</a>.</p>
+{% else %}
+	<p>Welcome, new user. Please <a href="{% url 'auth_login' %}">log in</a> or <a href="{% url 'logup' %}">set up an account</a>.</p>
+{% endif %}
+
+{% endblock %}

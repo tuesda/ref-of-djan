@@ -1,4 +1,4 @@
-# Django settings for uptest project.
+# Django settings for models_test project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -11,13 +11,13 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'uptest',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'models_app.db',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'root',
-        'PASSWORD': '193129',
-        'HOST': 'localhost',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '3306',                      # Set to empty string for default.
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '',                      # Set to empty string for default.
     }
 }
 
@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'Asia/Shanghai'
+TIME_ZONE = 'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -50,12 +50,12 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = 'D:/upload/'
+MEDIA_ROOT = ''
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = 'http://localhost:9000/'
+MEDIA_URL = ''
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -83,7 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '7p7t7_mgmt1ifnrse(&1xhi68_xc0(08+(jhfel*7a=!((^-a8'
+SECRET_KEY = 'xpb^cb733t=9+h=4@rxln0ng#1^5vi^q*h8v+a53g1smxh98q='
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -102,10 +102,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'uptest.urls'
+ROOT_URLCONF = 'models_test.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'uptest.wsgi.application'
+WSGI_APPLICATION = 'models_test.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -120,9 +120,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
+    'models_app',
     # Uncomment the next line to enable the admin:
-     'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

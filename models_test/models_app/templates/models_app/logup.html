@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}log up{% endblock %}
+{% block content %}
+{% include 'nav.html' %}
+<h1>注册账号</h1>
+<form action="" method="post">
+{% csrf_token %}
+<table>
+{{ form.as_table }}
+</table>
+<input type="submit" value="注册" style="position: relative; left: 170px;" />
+</form>
+{% endblock %}
