@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Comments{% endblock %}
+{% block content %}
+{% for comment in comments %}
+<div class="item" style="width:23%; float: left; border: 2px solid grey; margin: 5px;">
+<div class="avatar" style="width:50px">
+<img src="http://i786.photobucket.com/albums/yy146/zhanglei193/23e0af95f42bbb18be9de0189346034d_zps183a60c8.jpeg" style="width: inherit;" />
+</div>
+<div class="img" style="width:100%;">
+	<img src="http://i786.photobucket.com/albums/yy146/zhanglei193/23e0af95f42bbb18be9de0189346034d_zps183a60c8.jpeg" style="width:100%" />
+</div>
+<div class="text" style="background: #f7f4de">
+	<p>{{ comment.text }}</p>
+</div>
+</div>
+{% endfor %}
+{% endblock %}

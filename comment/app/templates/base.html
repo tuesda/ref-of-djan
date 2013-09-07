@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<link rel="shortcut icon" type="image/x-icon" href="http://i786.photobucket.com/albums/yy146/zhanglei193/ac4bd11373f082029e3c8eb44afbfbedaa641b8a_zpsc27bd91b.jpg" />
+<meta charset='utf-8'>
+</head>
+<body>
+<div class='content'>
+{% block content %}{% endblock %}
+</div>
+</body>
+</html>

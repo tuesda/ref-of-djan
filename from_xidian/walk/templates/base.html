@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+<meta charset="utf-8">
+<title>
+	{% block title %}{% endblock %}
+</title>
+</head>
+<body>
+	<div class="content">
+	{% block content %}{% endblock %}
+	</div>
+</body>
+</html>
